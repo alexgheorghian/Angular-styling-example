@@ -1,0 +1,48 @@
+<!-- The purpose of the index.html file is to...
+1. Put any html such as Navbars that we wish to have access throughout our app
+2. Include all .js files that we have created
+3. Include stylesheets
+4. Include libraries
+ -->
+
+
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>coder-camps-js</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/site.css">
+</head>
+
+<body>
+	<md-toolbar layout="row" layout-sm="column" > <!-- if the page is shrunk, the elements below will be stacked -->
+
+		<span flex="5"> </span>         						<!-- insert some space to the left of the page header below -->
+		<h1>Share your favorite puppy pictures</h1>
+		<span flex> </span>        									<!-- insert some space between the header and the buttons-->
+		<!--  uisref is a ui state reference, similar to a href -->
+		<md-button class="md-raised md-primary" ui-sref="Home">Home</md-button>
+		<md-button class="md-raised md-accent" ui-sref="Create">Create</md-button>
+		<span flex="5"> </span>    									<!-- insert some space to the right of the buttons -->
+
+	</md-toolbar>
+
+<ui-view layout="column" layout-fill layout-padding layout-margin></ui-view>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-aria.min.js"></script>
+	<!-- Angular Material Javascript now available via Google CDN; version 0.11.2 used here -->
+	<!--  Modules -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
+
+	<script src="/javascript/app.js"></script>
+	<!-- Services -->
+	<script src="/javascript/services/AnimalFactory.js"></script>
+	<!-- Controllers -->
+	<script src="/javascript/controllers/HomeController.js"></script>
+	<script src="/javascript/controllers/CreateController.js"></script>
+	<script src="/javascript/controllers/EditAnimalController.js"></script>
+</body>
+</html>

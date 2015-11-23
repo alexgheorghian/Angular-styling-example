@@ -1,0 +1,32 @@
+.md-button {
+  padding: 0 6px 0 6px;
+  margin: 6px 8px 6px 8px;
+  min-width: 50px;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration:none;
+  border: none;
+  outline: none;
+}
+
+body {
+    background-color: #b0c4de;
+}
+
+md-button {
+  max-height: 10px;
+}
+
+
+#setCardBackground {
+    background-color: #6495ed;
+    border-style: solid;
+    border-color: #ffffff;
+    box-shadow: 10px 5px 5px gray;
+}
+
+#setCreateCardBackground {
+    background-color: #ffffff;
+}

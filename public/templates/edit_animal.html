@@ -1,0 +1,24 @@
+<md-card>
+  <form layout-padding ng-submit="vm.editAnimal();">
+
+    <md-input-container>
+      <label>Animal Name</label>
+      <input type="text" ng-model="vm.animal.name"/>
+    </md-input-container>
+
+    <md-input-container>
+      <label>Animal Species</label>
+      <input type="text" ng-model="vm.animal.species"/>
+    </md-input-container>
+
+    <md-input-container>
+      <label>Image URL</label>
+      <input type="text" ng-model="vm.animal.imageUrl"/>
+    </md-input-container>
+
+    <div layout layout-align="center">
+    <md-button type="submit" class="md-raised md-primary" ng-disabled="vm.isDisabled">Submit</md-button>
+    </div>
+
+  </form>
+</md-card>

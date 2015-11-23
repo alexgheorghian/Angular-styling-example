@@ -1,0 +1,30 @@
+<br>
+<div layout="row" layout-wrap >
+  <div ng-repeat="a in vm.animals" flex="25" flex-md="50" flex-sm="100">
+
+  <md-card id="setCardBackground" layout ="column" layout-wrap class="md-hue-4 ">
+      <div>
+        <img ng-src="{{a.imageUrl}}" ng-alt="{{a.name}}" />
+      </div>
+
+      <div layout>
+        <div layout="column">
+          <span><i>Name: </i>{{a.name}}</span>
+          <span><i>Species: </i>{{a.species}}</span>
+        </div>
+      </div>
+
+        <div flex layout layout-wrap>
+            <md-button class="md-raised md-warn md-hue-3" ng-click="vm.deleteAnimal(a._id, $index)">Delete</md-button>
+            <!-- If we need to navigate to a diff. page upon button click, then we should use ui-sref, and
+             reference the state which was defined in app.js (EditAnimal).
+             Otherwise ng-click will do the job.
+             To open up a modal, we need to use ng-click
+             The variable whatever is assigned the string stored in a._id -->
+            <md-button class="md-raised md-primary md-hue-3 " ui-sref="EditAnimal({whatever: a._id})">Edit</md-button>
+      </div>
+
+    </div>
+  </md-card>
+</div>
+</div>
